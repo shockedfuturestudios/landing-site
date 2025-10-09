@@ -19,10 +19,10 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-background to-pink-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black-900/20 via-background to-gray-900/20" />
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-black-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 text-center">
@@ -31,9 +31,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 rounded-full mb-8">
-            <TriangleAlert className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300">Website in Beta! Changes will happen!</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-red-500/10 backdrop-blur-sm border border-purple-500/20 rounded-full mb-8">
+            <TriangleAlert className="w-4 h-4" />
+            <span>Website in Beta! Changes will happen!</span>
           </div>
         </motion.div>
 
@@ -63,16 +63,16 @@ export function Hero() {
         >
           <button
             onClick={() => document.getElementById('games')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group px-8 py-3 bg-gradient-to-r from-purple-500/80 to-pink-500/80 backdrop-blur-md rounded-lg hover:shadow-lg hover:shadow-purple-500/50 hover:from-purple-500 hover:to-pink-500 transition-all duration-300 border border-white/10"
+            className="group px-8 py-3 bg-gradient-to-r from-black-500/80 to-gray-500/80 backdrop-blur-md rounded-lg hover:shadow-lg hover:shadow-black-500/50 hover:from-black-500 hover:to-gray-500 transition-all duration-300 border border-white/10"
           >
             <span className="flex items-center justify-center space-x-2">
               <Gamepad2 className="w-5 h-5" />
-              <span>Explore Our Games</span>
+              <span className="text-white">Explore Our Games</span>
             </span>
           </button>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 bg-white/5 backdrop-blur-md border border-purple-500/30 rounded-lg hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
+            className="px-8 py-3 bg-white/5 backdrop-blur-md border border-black-500/30 rounded-lg hover:bg-white/10 hover:border-black-500/50 transition-all duration-300"
           >
             Get in Touch
           </button>
@@ -85,8 +85,8 @@ export function Hero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-purple-500/30 rounded-full p-1">
-          <div className="w-1.5 h-3 bg-purple-500 rounded-full mx-auto" />
+        <div className="w-6 h-10 border-2 border-black-500/30 rounded-full p-1">
+          <div className="w-1.5 h-3 bg-black-500 rounded-full mx-auto" />
         </div>
       </motion.div>
     </section>
