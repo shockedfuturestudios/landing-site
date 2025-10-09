@@ -5,15 +5,6 @@ import { Logo } from './Logo';
 // the beta alert imports
 import { useState, useEffect } from 'react';
 import { AlertTriangle } from 'lucide-react';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from './ui/alert-dialog';
 
 export function Hero() {
   return (
@@ -37,6 +28,7 @@ export function Hero() {
           </div>
         </motion.div>
 
+        { /* [START] Logo and Tagline */}
         <motion.div
           className="flex justify-center mb-8"
           initial={{ opacity: 0, y: 20 }}
