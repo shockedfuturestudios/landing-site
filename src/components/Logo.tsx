@@ -9,14 +9,14 @@ export function Logo({ className = "w-auto h-24" }: { className?: string }) {
       {/* Lightning bolt / shock element */}
       <defs>
         <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
+          <stop offset="50%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
         </linearGradient>
         <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: '#c084fc', stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: '#f0abfc', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#c084fc', stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
+          <stop offset="50%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
         </linearGradient>
       </defs>
       
