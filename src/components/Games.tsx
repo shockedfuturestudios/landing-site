@@ -5,7 +5,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const games = [
   {
     title: 'Stories Before the Bombs',
-    description: 'Stories Before the Bombs is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell.,
+    description: 'Stories Before the Bombs is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell.',
     status: 'In Development',
     image: 'https://images.unsplash.com/photo-1623002126996-a38b8a41f4f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NTk4MDYxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     tags: ['TRPG', 'Realistic-Fiction' , 'Story-Rich' , 'Indie'],
