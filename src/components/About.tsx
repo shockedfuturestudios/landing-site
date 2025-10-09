@@ -5,7 +5,7 @@ const features = [
   {
     icon: Code,
     title: 'Innovative Design',
-    description: 'We push the boundaries of game design, creating unique mechanics and unforgettable experiences.',
+    description: 'We stay with the new while innovating on the old.',
   },
   {
     icon: Users,
@@ -15,7 +15,7 @@ const features = [
   {
     icon: Zap,
     title: 'Rapid Innovation',
-    description: 'Fast-paced development cycles allow us to iterate quickly and deliver quality games.',
+    description: 'Development Cycles are done as regularly as possible with a small team like us.',
   },
 ];
 
