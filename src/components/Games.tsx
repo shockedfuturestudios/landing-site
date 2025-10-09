@@ -4,29 +4,22 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const games = [
   {
-    title: 'Neon Odyssey',
-    description: 'A cyberpunk adventure through a world of neon lights and dark secrets. Uncover the truth behind the corporation.',
+    title: 'Stories Before the Bombs',
+    description: 'Stories Before the Bombs is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell.,
     status: 'In Development',
     image: 'https://images.unsplash.com/photo-1623002126996-a38b8a41f4f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NTk4MDYxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['RPG', 'Cyberpunk', 'Story-Rich'],
+    tags: ['TRPG', 'Realistic-Fiction' , 'Story-Rich' , 'Indie'],
     purchaseUrl: 'https://www.dissun.org/ '
   },
   {
-    title: 'Quantum Shift',
-    description: 'Manipulate time and space in this mind-bending puzzle platformer. Reality is not what it seems.',
-    status: 'Coming 2026',
-    image: 'https://images.unsplash.com/photo-1739184523594-564cb9b61126?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwZ2FtaW5nJTIwZGFya3xlbnwxfHx8fDE3NTk4ODMxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['Puzzle', 'Platformer', 'Indie'],
-    purchaseUrl: ''
-  },
-  {
-    title: 'Project Echo',
-    description: 'A mysterious new project that explores the boundaries between sound and gameplay. More details coming soon.',
+    title: 'Nuclear Winter',
+    description: 'Nuclear Winter is a Apocalyptic RPG game set in the fictional state of Toland Russia. Play as a WVR Soldier taking down threats and making the wintery wasteland that is toland safe once more.',
     status: 'Concept',
-    image: 'https://images.unsplash.com/photo-1673350808686-209dc177c898?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMGdhbWUlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NTk4MTIyMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['Experimental', 'Audio', 'Mystery'],
+    image: 'https://images.unsplash.com/photo-1739184523594-564cb9b61126?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwZ2FtaW5nJTIwZGFya3xlbnwxfHx8fDE3NTk4ODMxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    tags: ['RPG', 'FPS', 'Indie'],
     purchaseUrl: ''
   },
+
 ];
 
 export function Games() {
