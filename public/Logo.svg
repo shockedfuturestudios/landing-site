@@ -1,0 +1,18 @@
+<svg viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-auto h-32 md:h-40 drop-shadow-2xl">
+    <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;"></stop>
+            <stop offset="50%" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;"></stop>
+            <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;"></stop>
+        </linearGradient>
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;"></stop>
+            <stop offset="50%" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;"></stop>
+            <stop offset="100%" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;"></stop>
+        </linearGradient>
+    </defs>
+    <circle cx="73.5" cy="60.5" r="41.5" stroke="black" stroke-width="3"></circle>
+    <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="black" stroke="black" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+    <text x="130" y="50" fill="url(#textGradient)" font-family="system-ui, -apple-system, sans-serif" class="tracking-tight"><tspan font-size="28" font-weight="700">SHOCKED</tspan></text>
+    <text x="130" y="80" fill="url(#textGradient)" font-family="system-ui, -apple-system, sans-serif" class="tracking-wide"><tspan font-size="24" font-weight="300" letter-spacing="2">FUTURE</tspan></text>
+</svg>

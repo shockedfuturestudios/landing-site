@@ -20,27 +20,12 @@ export function Logo({ className = "w-auto h-24" }: { className?: string }) {
         </linearGradient>
       </defs>
       
-      {/* Circuit-style decorative elements */}
-      <path
-        d="M10 60 L30 60 L30 50 L40 50"
-        stroke="url(#logoGradient)"
-        strokeWidth="2"
-        fill="none"
-        opacity="0.5"
-      />
-      <circle cx="30" cy="60" r="3" fill="url(#logoGradient)" />
-      <circle cx="40" cy="50" r="3" fill="url(#logoGradient)" />
-      
-      {/* Lightning bolt icon */}
-      <path
-        d="M65 25 L50 60 L60 60 L45 95 L75 50 L65 50 Z"
-        fill="url(#logoGradient)"
-        className="drop-shadow-lg"
-      />
+      <circle cx="73.5" cy="60.5" r="41.5" stroke="black" stroke-width="5" />
+      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="black" stroke="black" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
       
       {/* SHOCKED text */}
       <text
-        x="95"
+        x="130"
         y="50"
         fill="url(#textGradient)"
         fontFamily="system-ui, -apple-system, sans-serif"
@@ -51,7 +36,7 @@ export function Logo({ className = "w-auto h-24" }: { className?: string }) {
       
       {/* FUTURE text */}
       <text
-        x="95"
+        x="130"
         y="80"
         fill="url(#textGradient)"
         fontFamily="system-ui, -apple-system, sans-serif"
@@ -59,17 +44,21 @@ export function Logo({ className = "w-auto h-24" }: { className?: string }) {
       >
         <tspan fontSize="24" fontWeight="300" letterSpacing="2">FUTURE</tspan>
       </text>
-      
-      {/* Circuit-style decorative elements (right side) */}
-      <path
-        d="M360 60 L380 60 L380 70 L390 70"
-        stroke="url(#logoGradient)"
-        strokeWidth="2"
-        fill="none"
-        opacity="0.5"
-      />
-      <circle cx="380" cy="60" r="3" fill="url(#logoGradient)" />
-      <circle cx="390" cy="70" r="3" fill="url(#logoGradient)" />
+    </svg>
+  );
+}
+
+export function LogoNoTypography({ className = "w-auto h-24" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 400 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+
+      <circle cx="73.5" cy="60.5" r="41.5" stroke="black" stroke-width="9" />
+      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="black" stroke="black" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   );
 }

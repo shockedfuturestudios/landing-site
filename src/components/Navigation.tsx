@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Logo } from './Logo';
+import { LogoNoTypography } from './Logo';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ export function Navigation() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
-            <Logo className="w-auto h-10" />
+            <LogoNoTypography className="w-auto h-10" />
           </button>
 
           {/* Desktop Navigation */}
