@@ -19,10 +19,10 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black-900/20 via-background to-gray-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-background to-gray-900/20" />
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-black-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-black/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 text-center">
@@ -31,7 +31,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-red-500/10 backdrop-blur-sm border border-purple-500/20 rounded-full mb-8">
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-red-500/55 backdrop-blur-sm border border-black-500/20 rounded-full mb-8">
             <TriangleAlert className="w-4 h-4" />
             <span>Website in Beta! Changes will happen!</span>
           </div>
@@ -63,7 +63,7 @@ export function Hero() {
         >
           <button
             onClick={() => document.getElementById('games')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group px-8 py-3 bg-gradient-to-r from-black-500/80 to-gray-500/80 backdrop-blur-md rounded-lg hover:shadow-lg hover:shadow-black-500/50 hover:from-black-500 hover:to-gray-500 transition-all duration-300 border border-white/10"
+            className="group px-8 py-3 bg-gradient-to-r from-black/80 to-gray-500/80 backdrop-blur-md rounded-lg hover:shadow-lg hover:shadow-black-500/50 hover:from-black-500 hover:to-gray-500 transition-all duration-300 border border-white/10"
           >
             <span className="flex items-center justify-center space-x-2">
               <Gamepad2 className="w-5 h-5" />
