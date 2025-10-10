@@ -77,9 +77,6 @@ export function Navigation() {
             <button onClick={() => scrollToSection('games')} className="hover:text-purple-400 transition-colors">
               Games
             </button>
-            <button onClick={() => scrollToSection('team')} className="hover:text-purple-400 transition-colors">
-              Team
-            </button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-purple-400 transition-colors">
               Contact
             </button>
