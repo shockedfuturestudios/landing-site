@@ -71,7 +71,7 @@ export function Games() {
 
                 <p className="text-muted-foreground mb-4">{game.description}</p>
 
-                <p className="text-muted-foreground mb-4 hover:underline"><a target="_blank" href={game.purchaseUrl}>Purchase {game.title}</a></p>
+                <p className="text-muted-foreground mb-4 hover:underline"><a target="_blank" href={game.purchaseUrl} rel="noreferrer">Purchase {game.title}</a></p>
 
                 <div className="flex flex-wrap gap-2">
                   {game.tags.map((tag) => (

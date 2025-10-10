@@ -36,7 +36,7 @@ export function Contact() {
         >
           <h2 className="mb-4">Get in Touch</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have questions, feedback, or want to collaborate? We'd love to hear from you!
+            Have questions, feedback, or want to collaborate? We&apos;d love to hear from you!
           </p>
         </motion.div>
 

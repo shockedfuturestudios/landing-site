@@ -32,6 +32,9 @@ const SIDEBAR_WIDTH_MOBILE = "18rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 
+// Stable random width for skeletons (computed once at module load time)
+const RANDOM_SIDEBAR_WIDTH = `${Math.floor(Math.random() * 40) + 50}%`;
+
 type SidebarContextProps = {
   state: "expanded" | "collapsed";
   open: boolean;
@@ -569,7 +572,7 @@ function SidebarMenuAction({
         "peer-data-[size=lg]/menu-button:top-2.5",
         "group-data-[collapsible=icon]:hidden",
         showOnHover &&
-          "peer-data-[active=true]/menu-button:text-sidebar-accent-foreground group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0",
+        "peer-data-[active=true]/menu-button:text-sidebar-accent-foreground group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0",
         className,
       )}
       {...props}
@@ -606,10 +609,8 @@ function SidebarMenuSkeleton({
 }: React.ComponentProps<"div"> & {
   showIcon?: boolean;
 }) {
-  // Random width between 50 to 90%.
-  const width = React.useMemo(() => {
-    return `${Math.floor(Math.random() * 40) + 50}%`;
-  }, []);
+  // Use a stable, module-scoped random width (generated once at load time)
+  const width = RANDOM_SIDEBAR_WIDTH;
 
   return (
     <div
