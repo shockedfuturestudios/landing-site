@@ -8,6 +8,30 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script>
+      // Immediately set theme class before React mounts so initial paint matches stored/system preference
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          if (stored === "dark") {
+            document.documentElement.classList.add("dark");
+            return;
+          }
+          if (stored === "light") {
+            document.documentElement.classList.remove("dark");
+            return;
+          }
+          if (
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+          ) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
 
   <body>

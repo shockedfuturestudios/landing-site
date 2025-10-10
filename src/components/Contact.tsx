@@ -48,7 +48,7 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-purple-500/80 to-pink-500/80 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-white/10">
@@ -79,7 +79,7 @@ export function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
+                className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
                 placeholder="Your name"
               />
             </div>
@@ -93,7 +93,7 @@ export function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
+                className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -107,14 +107,14 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all resize-none"
+                className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all resize-none"
                 placeholder="Tell us about your inquiry..."
               />
             </div>
 
             <button
               type="submit"
-              className="w-full px-8 py-3 bg-gradient-to-r from-purple-500/80 to-pink-500/80 backdrop-blur-md rounded-lg hover:shadow-lg hover:shadow-purple-500/50 hover:from-purple-500 hover:to-pink-500 transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10"
+              className="cta cta-primary w-full px-8 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10"
             >
               <span>Send Message</span>
               <Send className="w-5 h-5" />

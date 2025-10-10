@@ -20,9 +20,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-red-500/55 backdrop-blur-sm border border-black-500/20 rounded-full mb-8">
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-red-600/12 backdrop-blur-sm border border-red-600/20 rounded-full mb-8 text-red-500">
             <TriangleAlert className="w-4 h-4" />
-            <span>Website in Beta! Changes will happen!</span>
+            <span className="text-sm font-medium">Website in Beta — content may change</span>
           </div>
         </motion.div>
         {/* [END] quick alert tooltip */}
@@ -43,7 +43,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-            Stay Shocked for the Future.
+          Stay Shocked for the Future.
         </motion.p>
         { /* [END] Logo and Tagline */}
 
@@ -56,33 +56,22 @@ export function Hero() {
         >
           <button
             onClick={() => document.getElementById('games')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group px-8 py-3 bg-gradient-to-r from-black/80 to-gray-500/80 backdrop-blur-md rounded-lg hover:shadow-lg hover:shadow-black-500/50 hover:from-black-500 hover:to-gray-500 transition-all duration-300 border border-white/10"
+            className="cta cta-primary group px-8 py-3 rounded-lg transition-all duration-300"
           >
             <span className="flex items-center justify-center space-x-2">
               <Gamepad2 className="w-5 h-5" />
-              <span className="text-white">Explore Our Games</span>
+              <span>Explore Our Games</span>
             </span>
           </button>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 bg-white/5 backdrop-blur-md border border-black-500/30 rounded-lg hover:bg-white/10 hover:border-black-500/50 transition-all duration-300"
+            className="cta cta-secondary px-8 py-3 rounded-lg transition-all duration-300"
           >
             Get in Touch
           </button>
         </motion.div>
       </div>
       { /* [END] Call to Action Buttons */}
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 border-2 border-black-500/30 rounded-full p-1">
-          <div className="w-1.5 h-3 bg-black-500 rounded-full mx-auto" />
-        </div>
-      </motion.div>
     </section>
   );
 }

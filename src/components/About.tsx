@@ -32,7 +32,7 @@ export function About() {
         >
           <h2 className="mb-4">About Our Studio</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Born from a passion for gaming and a vision for the future, Shocked Future is dedicated to 
+            Born from a passion for gaming and a vision for the future, Shocked Future is dedicated to
             creating games that surprise, delight, and inspire players around the world.
           </p>
         </motion.div>
@@ -41,7 +41,7 @@ export function About() {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+              className="p-6 feature-card rounded-xl border hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

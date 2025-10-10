@@ -8,7 +8,7 @@ const games = [
     description: 'Stories Before the Bombs is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell. More information at the purchase link.',
     status: 'In Development',
     image: 'https://images.unsplash.com/photo-1623002126996-a38b8a41f4f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NTk4MDYxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['TRPG', 'Realistic-Fiction' , 'Story-Rich' , 'Indie'],
+    tags: ['TRPG', 'Realistic-Fiction', 'Story-Rich', 'Indie'],
     purchaseUrl: 'https://shockedfuture.itch.io/sbte'
   },
   {
@@ -39,11 +39,11 @@ export function Games() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="games-grid">
           {games.map((game, index) => (
             <motion.div
               key={game.title}
-              className="group relative bg-white/5 backdrop-blur-md rounded-xl overflow-hidden border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20"
+              className="group relative bg-white/5 backdrop-blur-md rounded-xl overflow-hidden border border-gray/10 transition-all duration-300 card-shadow"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -55,20 +55,23 @@ export function Games() {
                   alt={game.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-80" />
               </div>
 
               <div className="p-6">
                 <div className="flex items-start justify-between mb-3">
                   <h3>{game.title}</h3>
-                  <Badge variant="secondary" className="bg-purple-500/20 backdrop-blur-sm text-purple-300 border-purple-500/30">
+                  <Badge
+                    variant="secondary"
+                    className="backdrop-blur-sm text-purple-300 border-purple-500/30 dark:bg-purple-500/20 dark:text-purple-300 bg-purple-50 text-purple-700 border-purple-200"
+                  >
                     {game.status}
                   </Badge>
                 </div>
 
                 <p className="text-muted-foreground mb-4">{game.description}</p>
 
-                <p className="text-muted-foreground mb-4"><a className="text-underline" target="_blank" href={game.purchaseUrl}>Purchase {game.title}</a></p>
+                <p className="text-muted-foreground mb-4 hover:underline"><a target="_blank" href={game.purchaseUrl}>Purchase {game.title}</a></p>
 
                 <div className="flex flex-wrap gap-2">
                   {game.tags.map((tag) => (
