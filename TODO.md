@@ -43,6 +43,8 @@ This file summarizes outstanding tasks and quick next steps for the website proj
   - Purpose: make Games grid cards have a constant drop shadow matching the CTA shadow style.
   - Files: `src/components/Games.tsx`, `src/index.css`
 
+- [ ] Set proper form email (inside of [src/config/site.ts](src/config/site.ts)) and activate.
+
 ## Nice-to-have / Follow-ups
 
 - Tweak nav fade stops (currently ~85% -> 95%) to taste.

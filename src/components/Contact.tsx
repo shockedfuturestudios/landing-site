@@ -1,6 +1,13 @@
 import { Mail, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { CONTACT_EMAIL, TURNSTILE_SITE_KEY } from '../config/site';
+
+type WindowWithTurnstile = Window & {
+  turnstileCallback?: (token: string) => void;
+  turnstileExpired?: () => void;
+};
+
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -9,13 +16,8 @@ export function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thanks for reaching out! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
+  // The form performs native POST submission to FormSubmit; keep local state for controlled inputs.
+  const [isVerified, setIsVerified] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -23,6 +25,34 @@ export function Contact() {
       [e.target.name]: e.target.value,
     });
   };
+
+  useEffect(() => {
+    // Inject Cloudflare Turnstile script if not already present
+    if (!document.querySelector('script[src="https://challenges.cloudflare.com/turnstile/v0/api.js"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      s.async = true;
+      s.defer = true;
+      document.head.appendChild(s);
+    }
+
+    // Expose callbacks that Turnstile can call when challenge succeeds or expires.
+    const w = window as WindowWithTurnstile;
+    w.turnstileCallback = () => {
+      setIsVerified(true);
+    };
+    w.turnstileExpired = () => {
+      setIsVerified(false);
+    };
+
+    return () => {
+      // cleanup globals
+      try {
+        delete (window as WindowWithTurnstile).turnstileCallback;
+        delete (window as WindowWithTurnstile).turnstileExpired;
+      } catch { }
+    };
+  }, []);
 
   return (
     <section id="contact" className="py-24">
@@ -56,14 +86,15 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="mb-1">Email</h4>
-                  <p className="text-muted-foreground">example@shockedfuturestudio.com</p>
+                  <p className="text-muted-foreground">{CONTACT_EMAIL}</p>
                 </div>
               </div>
             </div>
           </motion.div>
 
           <motion.form
-            onSubmit={handleSubmit}
+            action={`https://formsubmit.co/${CONTACT_EMAIL}`}
+            method="POST"
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -112,8 +143,21 @@ export function Contact() {
               />
             </div>
 
+            <input type="hidden" name="_subject" value="New contact from website" />
+            <input type="hidden" name="_captcha" value="false" />
+            {/* Cloudflare Turnstile widget - script is injected on mount */}
+            <div className="turnstile-wrapper">
+              <div
+                className="cf-turnstile"
+                data-sitekey={TURNSTILE_SITE_KEY}
+                data-action="submit"
+                data-callback="turnstileCallback"
+                data-expired-callback="turnstileExpired"
+              />
+            </div>
             <button
               type="submit"
+              disabled={!isVerified}
               className="cta cta-primary w-full px-8 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10"
             >
               <span>Send Message</span>

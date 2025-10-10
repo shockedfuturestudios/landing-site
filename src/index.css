@@ -571,6 +571,24 @@
     cursor: pointer;
   }
 
+  /* Disabled state for CTA buttons */
+  .cta[disabled],
+  .cta:disabled {
+    opacity: 0.48;
+    pointer-events: none;
+    filter: grayscale(0.12) contrast(0.95);
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+  }
+
+  /* Slightly different disabled look in dark mode */
+  .dark .cta[disabled],
+  .dark .cta:disabled {
+    opacity: 0.42;
+    filter: grayscale(0.08) brightness(0.85);
+  }
+
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h1 {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-medium);
