@@ -554,8 +554,7 @@
     /* ensure text is light in dark mode for legibility */
     color: var(--color-white);
     /* stronger, slightly colored shadow so it shows on dark backgrounds */
-    box-shadow: 0 8px 26px rgba(27, 24, 35, 0.55),
-      0 6px 18px rgba(91, 33, 182, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
   }
 
   .dark .cta-primary:hover {
@@ -630,6 +629,38 @@
     font-size: var(--text-base);
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
+  }
+}
+
+/* input shadow / floating field helper */
+.input-shadow {
+  border-radius: .5rem;
+  /* soft floating shadow for light mode */
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.04);
+  transition: box-shadow 200ms ease, transform 150ms ease, background-color 200ms ease;
+  /* ensure the element keeps its existing border but visually shows boundary */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.input-shadow:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 34px rgba(99, 102, 241, 0.12), 0 4px 12px rgba(99, 102, 241, 0.06);
+  outline: none;
+}
+
+/* darker / deeper shadow for dark mode */
+.dark .input-shadow {
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.6), 0 3px 8px rgba(2, 6, 23, 0.4);
+}
+
+.dark .input-shadow:focus {
+  box-shadow: 0 14px 40px rgba(99, 102, 241, 0.18), 0 6px 18px rgba(99, 102, 241, 0.08);
+}
+
+/* If you want less shadow on very small screens, you can optionally reduce it */
+@media (max-width: 640px) {
+  .input-shadow {
+    box-shadow: 0 6px 14px rgba(16, 24, 40, 0.05), 0 1px 4px rgba(16, 24, 40, 0.03);
   }
 }
 
