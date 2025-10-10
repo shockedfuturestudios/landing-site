@@ -34,7 +34,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Logo className="w-auto h-32 md:h-40 drop-shadow-2xl" />
+          <Logo className="w-auto h-26 md:h-40 drop-shadow-2xl" />
         </motion.div>
 
         <motion.p

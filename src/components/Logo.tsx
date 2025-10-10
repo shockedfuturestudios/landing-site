@@ -2,52 +2,16 @@ import { useEffect, useState } from 'react';
 
 export function LogoLight({ className = "w-auto h-24" }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 400 120"
-      width="100%"
-      height="100%"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      {/* Lightning bolt / shock element */}
-      <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
-        </linearGradient>
-        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#000000', stopOpacity: 1 }} />
-        </linearGradient>
-      </defs>
+    <svg viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <circle cx="73.5" cy="60.5" r="41.5" stroke="black" stroke-width="3"></circle>
+      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="black" stroke="black" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
 
-      <circle cx="73.5" cy="60.5" r="41.5" stroke="black" strokeWidth={5} />
-      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="black" stroke="black" strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" />
+      <text x="125" y="75" fill="black" font-family="system-ui, -apple-system, sans-serif" className="tracking-tight"><tspan font-size="35" font-weight="700">SHOCKED</tspan></text>
 
-      {/* SHOCKED text */}
-      <text
-        x="130"
-        y="50"
-        fill="url(#textGradient)"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        className="tracking-tight"
-      >
-        <tspan fontSize="28" fontWeight="700">SHOCKED</tspan>
-      </text>
+      <text x="290" y="75" fill="black" font-family="system-ui, -apple-system, sans-serif" className="tracking-wide"><tspan font-size="35" font-weight="300" letter-spacing="2">FUTURE</tspan></text>
 
-      {/* FUTURE text */}
-      <text
-        x="130"
-        y="80"
-        fill="url(#textGradient)"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        className="tracking-wide"
-      >
-        <tspan fontSize="24" fontWeight="300" letterSpacing="2">FUTURE</tspan>
-      </text>
+
+      <text x="420" y="75" fill="black" font-family="system-ui, -apple-system, sans-serif" className="tracking-wide"><tspan font-size="35" font-weight="600" letter-spacing="2">STUDIOS</tspan></text>
     </svg>
   );
 }
@@ -71,52 +35,16 @@ export function LogoNoTypographyLight({ className = "w-auto h-24" }: { className
 
 export function LogoDark({ className = "w-auto h-24" }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 400 120"
-      width="100%"
-      height="100%"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      {/* Lightning bolt / shock element */}
-      <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
-        </linearGradient>
-        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
-        </linearGradient>
-      </defs>
+    <svg viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <circle cx="73.5" cy="60.5" r="41.5" stroke="white" stroke-width="3"></circle>
+      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="white" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
 
-      <circle cx="73.5" cy="60.5" r="41.5" stroke="white" strokeWidth={5} />
-      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="white" stroke="white" strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" />
+      <text x="125" y="75" fill="white" font-family="system-ui, -apple-system, sans-serif" className="tracking-tight"><tspan font-size="35" font-weight="700">SHOCKED</tspan></text>
 
-      {/* SHOCKED text */}
-      <text
-        x="130"
-        y="50"
-        fill="url(#textGradient)"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        className="tracking-tight"
-      >
-        <tspan fontSize="28" fontWeight="700">SHOCKED</tspan>
-      </text>
+      <text x="290" y="75" fill="white" font-family="system-ui, -apple-system, sans-serif" className="tracking-wide"><tspan font-size="35" font-weight="300" letter-spacing="2">FUTURE</tspan></text>
 
-      {/* FUTURE text */}
-      <text
-        x="130"
-        y="80"
-        fill="url(#textGradient)"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        className="tracking-wide"
-      >
-        <tspan fontSize="24" fontWeight="300" letterSpacing="2">FUTURE</tspan>
-      </text>
+
+      <text x="420" y="75" fill="white" font-family="system-ui, -apple-system, sans-serif" className="tracking-wide"><tspan font-size="35" font-weight="600" letter-spacing="2">STUDIOS</tspan></text>
     </svg>
   );
 }
