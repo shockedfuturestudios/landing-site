@@ -19,6 +19,7 @@ const games = [
     tags: ['RPG', 'FPS', 'Indie'],
     purchaseUrl: ''
   },
+
 ];
 
 export function Games() {
@@ -73,7 +74,7 @@ export function Games() {
                 <p className="text-muted-foreground mb-4 hover:underline"><a target="_blank" href={game.purchaseUrl} rel="noreferrer">Purchase {game.title}</a></p>
 
                 <div className="flex flex-wrap gap-2">
-                  {games.tags.map((tag) => (
+                  {game.tags.map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full"
