@@ -17,17 +17,9 @@ export function LogoLight({ className = "w-auto h-24" }: { className?: string })
 
 export function LogoNoTypographyLight({ className = "w-auto h-24" }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 400 120"
-      width="100%"
-      height="100%"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-
-      <circle cx="73.5" cy="60.5" r="41.5" stroke="black" strokeWidth={9} />
-      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="black" stroke="black" strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" />
+    <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M511.5 109C734.365 109 915 289.447 915 512C915 734.553 734.365 915 511.5 915C288.635 915 108 734.553 108 512C108 289.447 288.635 109 511.5 109Z" stroke="black" stroke-width="32" />
+      <path d="M92 616.5L617 39V406.5H932L407 984V616.5H92Z" fill="black" stroke="black" stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   );
 }
@@ -49,18 +41,12 @@ export function LogoDark({ className = "w-auto h-24" }: { className?: string }) 
 
 export function LogoNoTypographyDark({ className = "w-auto h-24" }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 400 120"
-      width="100%"
-      height="100%"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
 
-      <circle cx="73.5" cy="60.5" r="41.5" stroke="white" strokeWidth={9} />
-      <path d="M29 71.1111L84.625 10V48.8889H118L62.375 110V71.1111H29Z" fill="white" stroke="white" strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" />
+    <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M511.5 109C734.365 109 915 289.447 915 512C915 734.553 734.365 915 511.5 915C288.635 915 108 734.553 108 512C108 289.447 288.635 109 511.5 109Z" stroke="white" stroke-width="32" />
+      <path d="M92 616.5L617 39V406.5H932L407 984V616.5H92Z" fill="white" stroke="white" stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
+
   );
 }
 

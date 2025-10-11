@@ -36,14 +36,6 @@ export function Footer() {
                   Games
                 </button>
               </li>
-              <li>
-                <button
-                  onClick={() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-muted-foreground hover:text-purple-400 transition-colors"
-                >
-                  Team
-                </button>
-              </li>
             </ul>
           </div>
 
