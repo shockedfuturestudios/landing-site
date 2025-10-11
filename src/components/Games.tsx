@@ -7,7 +7,7 @@ const games = [
     title: 'Stories Before the Bombs',
     description: 'Stories Before the Bombs is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell. More information at the purchase link.',
     status: 'In Development',
-    image: 'https://images.unsplash.com/photo-1623002126996-a38b8a41f4f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NTk4MDYxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: 'game_banner/sbtb_banner.png',
     tags: ['TRPG', 'Realistic-Fiction', 'Story-Rich', 'Indie'],
     purchaseUrl: 'https://shockedfuture.itch.io/sbte'
   },
@@ -49,11 +49,12 @@ export function Games() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative overflow-hidden">
                 <ImageWithFallback
                   src={game.image}
                   alt={game.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full object-contain transition-transform duration-500"
+                  style={{ minHeight: '192px' }} /* 48 * 4 = 192px min-height instead of h-48 */
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-80" />
               </div>
