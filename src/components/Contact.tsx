@@ -167,7 +167,7 @@ export function Contact() {
               </motion.div>
 
               <motion.form
-                action={`https://formsubmit.co/${CONTACT_EMAIL}`}
+                  action={`https://formsubmit.co/5625c6a64f9871683c86c5abdca98a84`}
                 method="POST"
                 className="space-y-6"
                 onSubmit={handleSubmit}
@@ -218,22 +218,11 @@ export function Contact() {
                   />
                 </div>
 
-                <input type="hidden" name="_subject" value="New contact from website" />
+                <input type="hidden" name="_subject" value="New Message from Shocked Future." />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value={nextUrl} />
-                {/* Cloudflare Turnstile widget - script is injected on mount */}
-                <div className="turnstile-wrapper">
-                  <div
-                    className="cf-turnstile"
-                    data-sitekey={TURNSTILE_SITE_KEY}
-                    data-action="submit"
-                    data-callback="turnstileCallback"
-                    data-expired-callback="turnstileExpired"
-                  />
-                </div>
                 <button
                   type="submit"
-                  disabled={!isVerified}
                   className="cta cta-primary w-full px-8 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10"
                 >
                   <span>Send Message</span>
