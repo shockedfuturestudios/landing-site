@@ -22,7 +22,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-red-600/12 backdrop-blur-sm border border-red-600/20 rounded-full mb-8 text-red-500">
             <TriangleAlert className="w-4 h-4" />
-            <span className="text-sm font-medium">Website in Beta — content may change</span>
+            <span className="text-sm font-bold ">Website in Beta — content may change</span>
           </div>
         </motion.div>
         {/* [END] quick alert tooltip */}
@@ -38,7 +38,7 @@ export function Hero() {
         </motion.div>
 
         <motion.p
-          className="max-w-2xl mx-auto mb-8 text-muted-foreground"
+          className="max-w-2xl mx-auto mb-8 text-muted-foreground font-bold"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -56,11 +56,11 @@ export function Hero() {
         >
           <button
             onClick={() => document.getElementById('games')?.scrollIntoView({ behavior: 'smooth' })}
-            className="cta cta-primary group px-8 py-3 rounded-lg transition-all duration-300"
+            className="cta cta-primary group px-8 py-3 rounded-lg transition-all duration-300 "
           >
             <span className="flex items-center justify-center space-x-2">
               <Gamepad2 className="w-5 h-5" />
-              <span>Explore Our Games</span>
+              <span className="font-bold">Explore Our Games</span>
             </span>
           </button>
           <button

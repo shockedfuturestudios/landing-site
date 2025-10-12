@@ -5,19 +5,21 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const games = [
   {
     title: 'Stories Before the Bombs',
-    description: 'Stories Before the Bombs is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell. More information at the purchase link.',
+    description: 'Stories Before the Bombs is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell. Experience the stories of the people who lived there before the apocalypse.',
     status: 'In Development',
     image: 'game_banner/sbtb_banner.png',
     tags: ['TRPG', 'Realistic-Fiction', 'Story-Rich', 'Indie'],
-    purchaseUrl: 'https://shockedfuture.itch.io/sbte'
+    purchaseUrl: 'https://shockedfuture.itch.io/sbtb',
+    disablePurchase: true
   },
   {
     title: 'Nuclear Winter',
     description: 'Nuclear Winter is a Apocalyptic RPG game set in the fictional state of Toland Russia. Play as a WVR Soldier taking down threats and making the wintery wasteland that is toland safe once more.',
-    status: 'Concept',
+    status: 'Concept Stage',
     image: 'https://images.unsplash.com/photo-1739184523594-564cb9b61126?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwZ2FtaW5nJTIwZGFya3xlbnwxfHx8fDE3NTk4ODMxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     tags: ['RPG', 'FPS', 'Indie'],
-    purchaseUrl: ''
+    purchaseUrl: '',
+    disablePurchase: true
   },
 
 ];
@@ -61,7 +63,7 @@ export function Games() {
 
               <div className="p-6">
                 <div className="flex items-start justify-between mb-3">
-                  <h3>{game.title}</h3>
+                  <h3 className="font-bold">{game.title}</h3>
                   <Badge
                     variant="secondary"
                     className="backdrop-blur-sm text-purple-300 border-purple-500/30 dark:bg-purple-500/20 dark:text-purple-300 bg-purple-50 text-purple-700 border-purple-200"
@@ -70,9 +72,15 @@ export function Games() {
                   </Badge>
                 </div>
 
-                <p className="text-muted-foreground mb-4">{game.description}</p>
+                <p className="text-muted-foreground mb-4 font-medium">{game.description}</p>
 
-                <p className="text-muted-foreground mb-4 hover:underline"><a target="_blank" href={game.purchaseUrl} rel="noreferrer">Purchase {game.title}</a></p>
+                {!game.disablePurchase && (
+                  <p className="text-blue-600 mb-4 italic">
+                    <a target="_blank" href={game.purchaseUrl} rel="noreferrer">
+                      Get {game.title}
+                    </a>
+                  </p>
+                )}
 
                 <div className="flex flex-wrap gap-2">
                   {game.tags.map((tag) => (
