@@ -181,6 +181,14 @@
     text-decoration: underline dotted;
   }
 
+  .noai-gradient {
+    background: linear-gradient(
+      120deg,
+      #750b0b 0%,
+      #eb0808 100%
+    );
+  }
+
   h1,
   h2,
   h3,

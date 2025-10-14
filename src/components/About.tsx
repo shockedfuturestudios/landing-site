@@ -1,4 +1,4 @@
-import { Code, Users, Zap } from 'lucide-react';
+import { Code, Users, Zap, BotOff } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const features = [
@@ -17,6 +17,11 @@ const features = [
     title: 'Rapid Innovation',
     description: 'Development Cycles are done as regularly as possible with a small team like us.',
   },
+  {
+    icon: BotOff,
+    title: 'Human over Arificial',
+    description: 'We believe that human creativity and intuition are irreplaceable, even in an age of AI. We use technology to enhance our creative process, not replace it.',
+  }
 ];
 
 export function About() {
@@ -37,11 +42,12 @@ export function About() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        {/* Render all but the last feature in the responsive grid */}
+        <div className="games-grid gap-8">
+          {features.slice(0, -1).map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="p-6 feature-card rounded-xl border hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+              className="p-6 feature-card rounded-xl border hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 w-full"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -55,6 +61,30 @@ export function About() {
             </motion.div>
           ))}
         </div>
+
+        {/* Render the last feature on its own full-width row */}
+        {features.length > 0 && (() => {
+          const last = features[features.length - 1];
+          const Icon = last.icon;
+          return (
+            <div className="mt-8 mx-auto">
+              <motion.div
+                key={last.title}
+                className="p-6 feature-card rounded-xl border hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 w-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <div className="w-12 h-12 noai-gradient backdrop-blur-sm rounded-lg flex items-center justify-center mb-4 border border-white/10">
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="mb-2"><strong>{last.title}</strong></h3>
+                <p className="text-muted-foreground"><strong>{last.description}</strong></p>
+              </motion.div>
+            </div>
+          );
+        })()}
       </div>
     </section>
   );

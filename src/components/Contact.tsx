@@ -1,7 +1,7 @@
 import { Mail, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { CONTACT_EMAIL, TURNSTILE_SITE_KEY } from '../config/site';
+import { CONTACT_EMAIL } from '../config/site';
 
 type WindowWithTurnstile = Window & {
   turnstileCallback?: (token: string) => void;

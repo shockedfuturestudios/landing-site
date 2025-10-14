@@ -1,4 +1,4 @@
-import { Gamepad2, TriangleAlert } from 'lucide-react';
+import { Gamepad2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Logo } from './Logo';
 
@@ -44,7 +44,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Stay Shocked for the Future.
+          Human Creativity × Technology.
         </motion.p>
         { /* [END] Logo and Tagline */}
 
