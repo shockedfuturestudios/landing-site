@@ -14,7 +14,7 @@ const games = [
   },
   {
     title: 'Codename: Dustfall',
-    description: 'Codename: Dustfall is a Apocalyptic RPG game set in the fictional state of Toland Russia. Play as a WVR Soldier taking down threats and making the wintery wasteland that is toland safe once more.',
+    description: 'Codename: Dustfall is a Apocalyptic RPG currently as a mod for Fallout: New Vegas. We are still working on the concept and this may change. More to come.',
     status: 'Concept Stage',
     image: 'game_banner/nw_banner.png',
     tags: ['RPG', 'FPS', 'Indie'],
