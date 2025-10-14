@@ -5,7 +5,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const games = [
   {
     title: 'Codename: Tribute',
-    description: 'Codename: Tribute is a Text RPG game based on a fictional island named New Bank. where you play as multiple First Responders from before the Bombs fell. Experience the stories of the people who lived there before the apocalypse.',
+    description: 'Codename: Tribute is a Text RPG game based on a fictional island named New Bank. where you play as the islands Refuge Rescue Team from before the Bombs fell. Experience the stories of the people who lived there before the apocalypse.',
     status: 'In Development',
     image: 'game_banner/sbtb_banner.png',
     tags: ['TRPG', 'Realistic-Fiction', 'Story-Rich', 'Indie'],
