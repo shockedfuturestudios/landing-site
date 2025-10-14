@@ -64,7 +64,7 @@ export function Footer() {
             <h4 className="mb-4">Follow Us</h4>
             <div className="flex space-x-3">
               <a
-                href="#"
+                href="https://x.com/Shocked_Future"
                 className="cta cta-secondary w-10 h-10 bg-muted rounded-lg flex items-center justify-center transition-all"
                 aria-label="Twitter"
               >
