@@ -41,23 +41,23 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4">Legal</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-purple-400 transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-purple-400 transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-purple-400 transition-colors">
-                  Cookie Policy
-                </a>
-              </li>
-            </ul>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/privacy" className="text-muted-foreground hover:text-purple-400 transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="text-muted-foreground hover:text-purple-400 transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-purple-400 transition-colors">
+                    Cookie Policy
+                  </a>
+                </li>
+              </ul>
           </div>
 
           <div>

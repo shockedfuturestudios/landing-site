@@ -13,8 +13,8 @@ const games = [
     disablePurchase: true
   },
   {
-    title: 'Codename: Dustfall',
-    description: 'Codename: Dustfall is a Apocalyptic RPG currently as a mod for Fallout: New Vegas. We are still working on the concept and this may change. More to come.',
+    title: 'Codename: Flarepoint',
+    description: 'A completely new story to Fallout: New Vegas. Experience a brand new storyline, characters, and environment, all built upon the New Vegas engine.',
     status: 'Concept Stage',
     image: 'game_banner/nw_banner.png',
     tags: ['RPG', 'FPS', 'Indie'],
