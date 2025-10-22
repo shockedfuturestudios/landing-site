@@ -46,7 +46,9 @@ function AboutSection() {
             <p className="text-slate-400">{feature.description}</p>
           </motion.div>
         ))}
-        <motion.div
+      </div>
+      <br/>
+            <motion.div
             className="bg-slate-800 rounded-lg shadow-lg p-6 hover:bg-slate-700 transition-colors"
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +60,7 @@ function AboutSection() {
             </h3>
             <p className="text-slate-400 font-bold">While we embrace AI as a tool to enhance our workflow, we prioritize human creativity and craftsmanship in all aspects of our game development process.</p>
           </motion.div>
-      </div>
+
     </div>
   </section>
   )

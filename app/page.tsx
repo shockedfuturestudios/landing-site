@@ -6,7 +6,7 @@ import SiteHeader from "@/components/site-header";
 import { HeroSection } from "@/components/Hero";
 import AboutSection from "@/components/About";
 import GameSection from "@/components/Games";
-import CTASection from "@/components/cta-section";
+import CTASection from "@/components/Contact";
 import SiteFooter from "@/components/site-footer";
 
 const AnimatedBackground = () => {

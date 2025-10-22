@@ -5,156 +5,12 @@ function SiteFooter() {
   return (
     <footer className="bg-slate-900 border-t border-gray-800 bg-gradient-to-r from-gray-900 via-gray-800 to-black py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pl-5 ml-5 lg:pl-20 lg:ml-20">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-200 tracking-wider uppercase mb-4">
-              Products
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Tailwind CSS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Tailwind UI
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Headless UI
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-slate-200 tracking-wider uppercase mb-4">
-              Resources
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Screencasts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Playground
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-slate-200 tracking-wider uppercase mb-4">
-              Community
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  GitHub
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Discord
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Twitter
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-slate-200 tracking-wider uppercase mb-4">
-              Company
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center ">
           <p className="text-sm text-slate-400 pl-0 ml-0 lg:pl-20 lg:ml-20">
             © 2025 Shocked Future Studios LLC. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0 pr-0 mr-0 lg:pr-20 lg:mr-20">
-            <Link
-              href="#"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              <span className="sr-only">Facebook</span>
-              <svg
-                className="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-            <Link
+            {/* <Link
               href="#"
               className="text-slate-400 hover:text-white transition-colors"
             >
@@ -172,11 +28,12 @@ function SiteFooter() {
                 />
               </svg>
             </Link>
+            */}
             <Link
-              href="#"
+              href="https://x.com/Shocked_Future"
               className="text-slate-400 hover:text-white transition-colors"
             >
-              <span className="sr-only">Twitter</span>
+              <span className="sr-only">X (Formerly Twitter)</span>
               <svg
                 className="h-6 w-6"
                 fill="currentColor"
