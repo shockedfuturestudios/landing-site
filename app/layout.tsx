@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Inter as FontSans } from "next/font/google"
+import { GoogleAnalytics } from "@next/third-parties/google"
  
 import { cn } from "@/lib/utils"
  
@@ -27,7 +28,8 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
-      >{children}</body>
+          >{children}</body>
+          <GoogleAnalytics gaId="G-L4CCNQ63SH" />
     </html>
   );
 }
