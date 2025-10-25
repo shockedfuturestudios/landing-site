@@ -14,7 +14,7 @@ type Game = {
   id: string;
   title: string;
   description: string;
-  cover_image_url: string;
+  image: string;
   purchase_url: string;
   disable_purchase: boolean;
   status: string;
@@ -58,7 +58,7 @@ function GameSection() {
     {/* Cover Image */}
     <div className="relative w-full h-48 mb-4">
   <img
-    src={game.cover_image_url || "/ShockedFuture_PlaceholderImage.png"}
+    src={game.image || "https://hevrjknbnapqqxkejozd.supabase.co/storage/v1/object/public/public_web/ShockedFuture_PlaceholderImage.png"}
     alt={game.title}
     className="w-full h-full object-cover rounded-md"
   />
