@@ -5,7 +5,7 @@ function SiteFooter() {
   return (
     <footer className="bg-slate-900 border-t border-gray-800 bg-gradient-to-r from-gray-900 via-gray-800 to-black py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-8 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center ">
+        <div className="mt-8 pt-8 flex flex-col md:flex-row justify-between items-center ">
           <p className="text-sm text-slate-400 pl-0 ml-0 lg:pl-20 lg:ml-20">
             © 2025 Shocked Future Studios LLC. All rights reserved. Patreon®, and its logo are the trademarks of Patreon, Inc.
           </p>
@@ -15,8 +15,8 @@ function SiteFooter() {
               className="text-slate-400 hover:text-white transition-colors"
             >
               <span className="sr-only">Patreon</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.9569 7.21006C22.9527 4.14562 20.566 1.63406 17.7658 0.727837C14.2884 -0.397497 9.70222 -0.234385 6.38178 1.33228C2.35734 3.23139 1.09311 7.39139 1.046 11.5403C1.00733 14.9514 1.34778 23.9356 6.41533 23.9996C10.1807 24.0474 10.7413 19.1956 12.4836 16.8589C13.7231 15.1965 15.3191 14.7269 17.2838 14.2407C20.6604 13.4049 22.9618 10.7401 22.9569 7.21006Z" fill="white"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.9569 7.21006C22.9527 4.14562 20.566 1.63406 17.7658 0.727837C14.2884 -0.397497 9.70222 -0.234385 6.38178 1.33228C2.35734 3.23139 1.09311 7.39139 1.046 11.5403C1.00733 14.9514 1.34778 23.9356 6.41533 23.9996C10.1807 24.0474 10.7413 19.1956 12.4836 16.8589C13.7231 15.1965 15.3191 14.7269 17.2838 14.2407C20.6604 13.4049 22.9618 10.7401 22.9569 7.21006Z"/>
                 </svg>
             </Link>
             <Link

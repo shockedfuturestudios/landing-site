@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
 
 const supabase = createClient(
   "https://hevrjknbnapqqxkejozd.supabase.co",
@@ -58,7 +57,7 @@ function GameSection() {
     {/* Cover Image */}
     <div className="relative w-full h-48 mb-4">
   <img
-    src={game.image || "https://hevrjknbnapqqxkejozd.supabase.co/storage/v1/object/public/public_web/ShockedFuture_PlaceholderImage.png"}
+    src={game.image || "https://hevrjknbnapqqxkejozd.supabase.co/storage/v1/object/public/public_GameImage/PlaceholderFailure.png"}
     alt={game.title}
     className="w-full h-full object-cover rounded-md"
   />

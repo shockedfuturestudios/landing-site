@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-import { Inter as FontSans } from "next/font/google"
-import { GoogleAnalytics } from "@next/third-parties/google"
- 
+import { Inter as FontSans } from "next/font/google" 
 import { cn } from "@/lib/utils"
- 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
-
 export const metadata: Metadata = {
   title: "Shocked Future Studios",
   description: "A game development studio focused on creating engaging gameplay experiences without the need for high-end graphics.",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +23,6 @@ export default function RootLayout({
           fontSans.variable
         )}
           >{children}</body>
-          <GoogleAnalytics gaId="G-L4CCNQ63SH" />
     </html>
   );
 }
