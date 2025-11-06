@@ -22,7 +22,9 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
-          >{children}</body>
+          >
+            {/* I will crush everything that stands in my way. Everything. */}
+            {children}</body>
     </html>
   );
 }
