@@ -1,30 +1,35 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { Inter as FontSans } from "next/font/google" 
-import { cn } from "@/lib/utils"
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
+
+// SEO Metadata
 export const metadata: Metadata = {
-  title: "Shocked Future Studios",
-  description: "A game development studio focused on creating engaging gameplay experiences without the need for high-end graphics.",
+  title: {
+    template: '%s | Shocked Future Studios',
+    default: 'Shocked Future Studios - Making yesterday\'s games for today\'s world.',
+  },
+  description: "Shocked Future Studios is an indie game dev studio focusing on retro-inspired games for modern platforms.",
+  keywords: ['indie games', 'game dev', 'retro games', 'pixel art'],
 };
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-          >
-            {/* I will crush everything that stands in my way. Everything. */}
-            {children}</body>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

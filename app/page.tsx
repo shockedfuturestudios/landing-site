@@ -1,20 +1,21 @@
-"use client";
-import { HeroSection } from "@/components/Hero";
-import AboutSection from "@/components/About";
-import GameSection from "@/components/Games";
-import SiteFooter from "@/components/site-footer";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import { Metadata } from "next";
 
-export default function Component() {
+// Page-specific Metadata
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'Welcome to Shocked Future Studios. We make yesterday\'s games for today\'s world.',
+};
+
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white font-sans relative overflow-hidden">
-      <div className="relative z-10">
-        <main>
-          <HeroSection />
-          <AboutSection />
-          <GameSection />
-        </main>
-        <SiteFooter />
-      </div>
-    </div>
+    <>
+      {/* Each component is a full-width section */}
+      <Hero />
+      <About />
+      <Contact />
+    </>
   );
 }
