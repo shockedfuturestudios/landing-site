@@ -1,19 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import type { Metadata } from 'next';
+import { Host_Grotesk } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Host_Grotesk({ subsets: ['latin'] });
 
-// SEO Metadata
 export const metadata: Metadata = {
-  title: {
-    template: '%s | Shocked Future Studios',
-    default: 'Shocked Future Studios - Making yesterday\'s games for today\'s world.',
-  },
-  description: "Shocked Future Studios is an indie game dev studio focusing on retro-inspired games for modern platforms.",
-  keywords: ['indie games', 'game dev', 'retro games', 'pixel art'],
+  title: 'Shocked Future Studios',
+  description: 'Engineering tomorrow\'s realities.',
 };
 
 export default function RootLayout({
@@ -23,11 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <body className={inter.className}>
         <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main style={{ flex: 1 }}>{children}</main>
         <Footer />
       </body>
     </html>

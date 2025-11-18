@@ -1,21 +1,29 @@
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import { Metadata } from "next";
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './page.module.css';
 
-// Page-specific Metadata
-export const metadata: Metadata = {
-  title: 'Home',
-  description: 'Welcome to Shocked Future Studios. We make yesterday\'s games for today\'s world.',
-};
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      {/* Each component is a full-width section */}
-      <Hero />
-      <About />
-      <Contact />
-    </>
+    <div className={styles.heroContainer}>
+      <div className={styles.heroLogoContainer}>
+        <Image
+          src="/logo.svg"
+          alt="Shocked Future Studios Logo"
+          width={450}
+          height={120}
+          className={styles.heroLogo}
+          priority
+        />
+      </div>
+      <h3 className={styles.title}>
+        Reengineering yesterday's classics for tomorrow's gamers.
+      </h3>
+      <p className={styles.subtitle}>
+        We rebuilt the worlds you forgot.
+      </p>
+      <Link href="/games" className={styles.ctaButton}>
+        EXPLORE OUR GAMES
+      </Link>
+    </div>
   );
 }

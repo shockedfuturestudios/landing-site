@@ -1,43 +1,100 @@
-import { createClient } from "@/lib/supabase/server"; // Now importing our new function
-// We no longer need: import { cookies } from "next/headers";
-import GameCard from "@/components/GameCard";
-import { Metadata } from "next";
+import Image from 'next/image';
+import { supabase } from '@/lib/supabaseClient';
+import styles from './games.module.css';
 
-// ... (Game type definition remains the same) ...
-
-export const metadata: Metadata = {
-    // ...
+// Define a type for your game data (now with nullable fields)
+type Game = {
+    id: number;
+    title: string;
+    description: string;
+    status: string;
+    image: string | null;
+    purchase_url: string | null;
+    disable_purchase: boolean;
 };
 
+// Revalidate data every 60 seconds
 export const revalidate = 60;
 
-export default async function GamesPage() {
-    // Simpler: No more cookieStore variable needed here
-    const supabase = createClient();
-
-    const { data: games, error } = await supabase
-        .from("games")
-        .select("*")
-        .order("created_at", { ascending: false });
+async function getGames() {
+    // Be specific with your select statement
+    const { data, error } = await supabase
+        .from('games')
+        .select('id, title, description, status, image, purchase_url, disable_purchase')
+        .order('id', { ascending: true });
 
     if (error) {
-        // ... (error handling remains the same) ...
+        console.error('Error fetching games:', error);
+        return [];
     }
 
-    if (!games || games.length === 0) {
-        // ... (no games found handling remains the same) ...
-    }
+    return data as Game[];
+}
+
+export default async function GamesPage() {
+    const games = await getGames();
 
     return (
-        <div className="container mx-auto max-w-5xl px-4 py-12">
-            <h1 className="text-4xl font-bold text-center mb-8 text-primary">
-                Our Games
-            </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {games?.map((game: any) => (
-                    <GameCard key={game.id} game={game} />
-                ))}
-            </div>
+        <div className={styles.container}>
+            <h1 className={styles.title}>Our Games.</h1>
+
+            {games.length === 0 ? (
+                <p className={styles.noGames}>No games found. We are hard at work... 💾</p>
+            ) : (
+                <div className={styles.gamesGrid}>
+                    {games.map((game) => (
+                        <div key={game.id} className={styles.gameCard}>
+
+                            {/* Image Container */}
+                            <div className={styles.gameImageContainer}>
+                                {game.image ? (
+                                    <Image
+                                        src={game.image}
+                                        alt={`${game.title} cover art`}
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                ) : (
+                                    <div className={styles.imagePlaceholder} />
+                                )}
+                                <span className={styles.status}>{game.status}</span>
+                            </div>
+
+                            {/* Card Content: Title, Desc, Tags */}
+                            <div className={styles.cardContent}>
+                                <h2 className={styles.gameTitle}>{game.title}</h2>
+                                <p className={styles.gameDescription}>{game.description}</p>
+                            </div>
+
+                            {/* Button Container (pushed to bottom) */}
+                            <div className={styles.buttonContainer}>
+                                {game.purchase_url ? (
+                                    game.disable_purchase ? (
+                                        <span className={styles.purchaseButtonDisabled}>
+                                            Coming Soon
+                                        </span>
+                                    ) : (
+                                        <a
+                                            href={game.purchase_url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.purchaseButton}
+                                        >
+                                            Buy Now
+                                        </a>
+                                    )
+                                ) : (
+                                    // No URL provided, render nothing or a disabled state
+                                    <span className={styles.purchaseButtonDisabled}>
+                                        Not Available
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
