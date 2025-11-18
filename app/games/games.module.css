@@ -99,15 +99,15 @@
 }
 
 .gameDescription {
-  font-size: 0.7rem;
-  line-height: 1.5;
-  opacity: 0.72;
-}
-
-.versionTag {
   font-size: 1rem;
   line-height: 1.5;
   opacity: 0.8;
+}
+
+.versionTag {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.72;
 }
 
 /* New Tag styles */
