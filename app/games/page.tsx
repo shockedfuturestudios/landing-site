@@ -65,7 +65,10 @@ export default async function GamesPage() {
                             {/* Card Content: Title, Desc, Tags */}
                             <div className={styles.cardContent}>
                                 <h2 className={styles.gameTitle}>{game.title}</h2>
-                                <p className={styles.gameDescription}>{game.description}<br />{game.version ? `Version: ${game.version}` : 'Version: N/A'}</p>
+                                <p className={styles.gameDescription}>{game.description}</p>
+                                <p className={styles.gameVersion}>
+                                    {game.version ? `Version: ${game.version}` : 'Version: N/A'}
+                                </p>
                             </div>
 
                             {/* Button Container (pushed to bottom) */}
