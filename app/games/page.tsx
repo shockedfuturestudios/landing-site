@@ -65,7 +65,7 @@ export default async function GamesPage() {
                             {/* Card Content: Title, Desc, Tags */}
                             <div className={styles.cardContent}>
                                 <h2 className={styles.gameTitle}>{game.title}</h2>
-                                <p className={styles.gameDescription}>{game.description}</p>
+                                <p className={styles.gameDescription}>{game.description}<br />{game.version ? `Version: ${game.version}` : 'Version: N/A'}</p>
                             </div>
 
                             {/* Button Container (pushed to bottom) */}
@@ -91,9 +91,6 @@ export default async function GamesPage() {
                                         Not Available
                                     </span>
                                 )}
-                            </div>
-                            <div className={styles.versionTag}>
-                                {game.version ? `Version: ${game.version}` : 'Version: N/A'}
                             </div>
                         </div>
                     ))}
