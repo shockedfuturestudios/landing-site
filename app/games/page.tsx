@@ -11,6 +11,7 @@ type Game = {
     image: string | null;
     purchase_url: string | null;
     disable_purchase: boolean;
+    version: string | null;
 };
 
 // Revalidate data every 60 seconds
@@ -20,7 +21,7 @@ async function getGames() {
     // Be specific with your select statement
     const { data, error } = await supabase
         .from('games')
-        .select('id, title, description, status, image, purchase_url, disable_purchase')
+        .select('id, title, description, status, image, purchase_url, disable_purchase, version')
         .order('id', { ascending: true });
 
     if (error) {
@@ -90,6 +91,9 @@ export default async function GamesPage() {
                                         Not Available
                                     </span>
                                 )}
+                            </div>
+                            <div className={styles.versionTag}>
+                                {game.version ? `Version: ${game.version}` : 'Version: N/A'}
                             </div>
                         </div>
                     ))}
