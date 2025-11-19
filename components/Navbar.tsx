@@ -1,20 +1,15 @@
+'use client';
+
+import { useAuth } from '@/context/AuthContext'; // Import hook
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
+    const { user, loading } = useAuth(); // Get user and loading state
+
     return (
         <nav className={styles.navbar}>
-            <Link href="/" className={styles.logoContainer}>
-                <Image
-                    src="/logo.svg"
-                    alt="Shocked Future Studios Logo"
-                    width={150}
-                    height={35}
-                    className={styles.logoImage}
-                    priority // Load the logo quickly
-                />
-            </Link>
             <div className={styles.navLinks}>
                 <Link href="/" className={styles.navLink}>
                     Home
@@ -25,6 +20,21 @@ export default function Navbar() {
                 <Link href="/games" className={styles.navLink}>
                     Our Games
                 </Link>
+
+                {/* Dynamic Auth Links */}
+                {!loading && (
+                    <>
+                        {user ? (
+                            <Link href="/profile" className={styles.navLink}>
+                                Profile
+                            </Link>
+                        ) : (
+                            <Link href="/login" className={styles.navLink}>
+                                Login
+                            </Link>
+                        )}
+                    </>
+                )}
             </div>
         </nav>
     );

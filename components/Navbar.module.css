@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   
@@ -25,16 +25,6 @@
   align-items: center;
 }
 
-.logoImage {
-  width: 350px; /* Set a specific width for navbar */
-  height: auto;
-  object-fit: contain;
-  transition: filter 0.3s ease;
-}
-
-.logoImage:hover {
-  filter: drop-shadow(0 0 15px var(--accent)); /* Glow on hover */
-}
 
 .navLinks {
   display: flex;
