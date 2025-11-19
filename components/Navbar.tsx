@@ -20,16 +20,17 @@ export default function Navbar() {
                 <Link href="/games" className={styles.navLink}>
                     Our Games
                 </Link>
-
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginLeft: 'auto' }}>
                 {/* Dynamic Auth Links */}
                 {!loading && (
                     <>
                         {user ? (
-                            <Link href="/profile" className={styles.navLink}>
+                            <Link href="/profile" className={styles.authLinks}>
                                 Profile
                             </Link>
                         ) : (
-                            <Link href="/login" className={styles.navLink}>
+                            <Link href="/login" className={styles.authLinks}>
                                 Login
                             </Link>
                         )}
