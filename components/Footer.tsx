@@ -16,7 +16,7 @@ export default function Footer() {
                     </Link>
                 </div>
                 <p className={styles.copyright}>
-                    © {currentYear} Shocked Future Studios. All rights reserved.
+                    © {currentYear} Shocked Future. All rights reserved.
                 </p>
             </div>
         </footer>

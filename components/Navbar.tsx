@@ -9,8 +9,8 @@ export default function Navbar() {
                 <Image
                     src="/logo.svg"
                     alt="Shocked Future Studios Logo"
-                    width={200}
-                    height={48}
+                    width={150}
+                    height={35}
                     className={styles.logoImage}
                     priority // Load the logo quickly
                 />
