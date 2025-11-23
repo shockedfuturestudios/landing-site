@@ -135,6 +135,24 @@ export default function ProfilePage() {
             setShowDeleteConfirm(false);
         }
     };
+
+    const getDisplayName = () => {
+        if (!user) return 'Operative';
+
+        // 1. Try to find Discord specific "global_name" (Display Name)
+        // This usually lives in the identities array which holds raw provider data
+        const discordIdentity = user.identities?.find((id) => id.provider === 'discord');
+        if (discordIdentity?.identity_data?.global_name) {
+            return discordIdentity.identity_data.global_name;
+        }
+
+        // 2. Check if "custom_claims" or "global_name" bubbled up to metadata
+        if (user.user_metadata?.global_name) return user.user_metadata.global_name;
+
+        // 3. Fallback to standard metadata (GitHub uses 'name' or 'full_name')
+        return user.user_metadata?.full_name || user.user_metadata?.name || 'Operative';
+    };
+
     // --- JSX ---
     return (
         <div className={styles.profileContainer}>
@@ -176,7 +194,26 @@ export default function ProfilePage() {
                         disabled={uploading}
                     />
 
-                    <h2 className={styles.userName}>{user.user_metadata.name ? `Hello, ${user.user_metadata.name}` : "Operative"}</h2>
+                    <h2 className={styles.userName}>{getDisplayName()}</h2>
+                    
+                    {/* Subscription/Rank Badge */}
+                    <div style={{
+                        display: 'inline-block',
+                        marginTop: '0.5rem',
+                        marginBottom: '1rem',
+                        padding: '0.25rem 0.75rem',
+                        background: 'rgba(0, 255, 255, 0.1)',
+                        border: '1px solid var(--accent)',
+                        borderRadius: '100px',
+                        color: 'var(--accent)',
+                        fontSize: '0.7rem',
+                        fontWeight: '700',
+                        letterSpacing: '0.05em',
+                        boxShadow: '0 0 10px rgba(0, 255, 255, 0.1)'
+                    }}>
+                        LEVEL 0 ACCESS
+                    </div>
+
                     <p className={styles.userEmail}>{user.email}</p>
                     <p style={{ fontSize: '0.8rem', opacity: 0.5, marginTop: '0.5rem' }}>
                         ID: {user.id.slice(0, 8)}...
@@ -261,7 +298,7 @@ export default function ProfilePage() {
             {/* 1. Social Avatar Warning Modal */}
             {showSocialWarning && (
                 <Modal
-                    title="EXTERNAL LINK DETECTED"
+                    title="EXTERNAL ACCOUNT LINK DETECTED"
                     onClose={() => setShowSocialWarning(false)}
                     actionLabel="Understood"
                 >
